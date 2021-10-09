@@ -32,6 +32,7 @@ requirements:
     - jinja2
     - oyaml
     - pathspec
+    - pluggy
     - pytest
     - python >=3.6
     - tblib
