@@ -1,7 +1,6 @@
 {% set name = "sqlfluff" %}
 {% set version = "0.8.1" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
