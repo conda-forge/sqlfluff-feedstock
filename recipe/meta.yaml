@@ -38,6 +38,7 @@ requirements:
     - python >=3.6
     - tblib
     - toml
+    - tqdm
     - typing_extensions
 
 test:
