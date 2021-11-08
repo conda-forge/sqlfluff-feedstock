@@ -33,11 +33,12 @@ requirements:
     - jinja2
     - oyaml
     - pathspec
-    - pluggy
+    - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.6
     - tblib
     - toml
+    - tomli
     - tqdm
     - typing_extensions
 
