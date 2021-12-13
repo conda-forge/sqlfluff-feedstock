@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "0.8.2" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: e48db0e1f7775c4609aa843cc8fa7fbc4a42d38fef640a78cc33d335ad385c62
+  sha256: aa1fda929572098393270fa9451a61f46ea57eb8b741f292b93611ac16fc9042
 
 build:
   noarch: python
@@ -35,6 +35,7 @@ requirements:
     - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.6
+    - regex
     - tblib
     - toml
     - tomli
