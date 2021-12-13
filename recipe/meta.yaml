@@ -35,6 +35,7 @@ requirements:
     - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.6
+    - regex
     - tblib
     - toml
     - tomli
