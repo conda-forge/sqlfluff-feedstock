@@ -46,6 +46,22 @@ test:
   imports:
     - sqlfluff
     - sqlfluff.api
+    - sqlfluff.cli
+    - sqlfluff.core
+    - sqlfluff.core.dialects
+    - sqlfluff.core.linters
+    - sqlfluff.core.parser
+    - sqlfluff.core.parser.grammar
+    - sqlfluff.core.parser.segments
+    - sqlfluff.core.plugin
+    - sqlfluff.core.rules
+    - sqlfluff.core.rules.analysis
+    - sqlfluff.core.rules.functional
+    - sqlfluff.core.templaters
+    - sqlfluff.core.templaters.slicers
+    - sqlfluff.dialects
+    - sqlfluff.rules
+    - sqlfluff.testing
   commands:
     - pip check
     - sqlfluff --help
