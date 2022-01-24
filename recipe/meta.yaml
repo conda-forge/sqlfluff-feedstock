@@ -22,13 +22,14 @@ requirements:
     - python >=3.6
   run:
     - appdirs
-    - cached-property
+    - backports.cached-property
     - chardet
     - click >=7.1
     - colorama >=0.3
     - configparser
     - dataclasses
     - diff-cover >=2.5.0
+    - importlib_metadata
     - jinja2
     - pathspec
     - pluggy <0.14.0,>=0.13.1
