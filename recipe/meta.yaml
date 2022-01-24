@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: e9769c2a952f069b18b5ed190cb158876fa5d7a1aa4e0a0e7e66087019d802fe
+  sha256: 1cbcd39b1c7e4f4ac831f4bfcaebdb442f456a5adac402a9eea1e961fede5856
 
 build:
   noarch: python
@@ -22,13 +22,14 @@ requirements:
     - python >=3.6
   run:
     - appdirs
-    - cached-property
+    - backports.cached-property
     - chardet
     - click >=7.1
     - colorama >=0.3
     - configparser
     - dataclasses
     - diff-cover >=2.5.0
+    - importlib_metadata
     - jinja2
     - pathspec
     - pluggy <0.14.0,>=0.13.1
@@ -42,14 +43,34 @@ requirements:
     - typing_extensions
 
 test:
+  source_files:
+    - test
   imports:
     - sqlfluff
     - sqlfluff.api
+    - sqlfluff.cli
+    - sqlfluff.core
+    - sqlfluff.core.dialects
+    - sqlfluff.core.linter
+    - sqlfluff.core.parser
+    - sqlfluff.core.parser.grammar
+    - sqlfluff.core.parser.segments
+    - sqlfluff.core.plugin
+    - sqlfluff.core.rules
+    - sqlfluff.core.rules.analysis
+    - sqlfluff.core.rules.functional
+    - sqlfluff.core.templaters
+    - sqlfluff.core.templaters.slicers
+    - sqlfluff.dialects
+    - sqlfluff.rules
+    - sqlfluff.testing
   commands:
     - pip check
     - sqlfluff --help
+    - pytest -vvv --capture=tee-sys test
   requires:
     - pip
+    - pytest
 
 about:
   home: https://www.sqlfluff.com/
