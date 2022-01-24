@@ -49,7 +49,7 @@ test:
     - sqlfluff.cli
     - sqlfluff.core
     - sqlfluff.core.dialects
-    - sqlfluff.core.linters
+    - sqlfluff.core.linter
     - sqlfluff.core.parser
     - sqlfluff.core.parser.grammar
     - sqlfluff.core.parser.segments
