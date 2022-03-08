@@ -32,7 +32,8 @@ requirements:
     - importlib_metadata
     - jinja2
     - pathspec
-    - pluggy
+    # Pin needed for diff-cover==6.2.2
+    - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.6
     - pyyaml >=5.1
