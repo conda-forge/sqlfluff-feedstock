@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: cd051960569564b0bf6b65033f8eebfaffc8abe28199d5b85bbcef9935bc7cef
+  sha256: b1120713e412c7914207419503156d7a742d542ecde05256cb78a1138697966a
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - appdirs
     - backports.cached-property
     - chardet
-    - click >=7.1
+    - click
     - colorama >=0.3
     - configparser
     - dataclasses
@@ -32,6 +32,7 @@ requirements:
     - importlib_metadata
     - jinja2
     - pathspec
+    # Pin needed for diff-cover==6.2.2
     - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.6
