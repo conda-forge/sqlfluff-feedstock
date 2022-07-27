@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - sqlfluff = sqlfluff.cli.commands:cli
   script: {{ PYTHON }} -m pip install . -vv
@@ -26,13 +26,10 @@ requirements:
     - chardet
     - click
     - colorama >=0.3
-    - configparser
     - diff-cover >=2.5.0
     - importlib_metadata
     - jinja2
     - pathspec
-    # Pin needed for diff-cover==6.2.2
-    - pluggy <0.14.0,>=0.13.1
     - pytest
     - python >=3.7
     - pyyaml >=5.1
