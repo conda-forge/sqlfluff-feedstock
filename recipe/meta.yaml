@@ -27,7 +27,7 @@ requirements:
     - click
     - colorama >=0.3
     - diff-cover >=2.5.0
-    - importlib_metadata
+    - importlib_metadata >=1.0.0
     - jinja2
     - pathspec
     - pytest
@@ -67,4 +67,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - borchero
     - thewchan
