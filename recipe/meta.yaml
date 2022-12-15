@@ -47,7 +47,7 @@ test:
   commands:
     - pip check
     - sqlfluff --help
-    - pytest -vvv --capture=tee-sys test
+    - pytest -vvv --capture=tee-sys -k "not test_helper_has_variable_introspection" test
   requires:
     - pip
     - pytest
