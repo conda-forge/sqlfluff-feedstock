@@ -154,5 +154,6 @@ Feedstock Maintainers
 =====================
 
 * [@borchero](https://github.com/borchero/)
+* [@svengiegerich](https://github.com/svengiegerich/)
 * [@thewchan](https://github.com/thewchan/)
 
