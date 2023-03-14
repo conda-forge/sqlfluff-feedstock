@@ -22,12 +22,12 @@ requirements:
     - python >=3.7
   run:
     - appdirs
-    - backports.cached-property  # [py<38]
+    - backports.cached-property
     - chardet
     - click
     - colorama >=0.3
     - diff-cover >=2.5.0
-    - importlib_metadata >=1.0.0  # [py<38]
+    - importlib_metadata >=1.0.0
     - jinja2
     - pathspec
     - pytest
@@ -35,7 +35,7 @@ requirements:
     - pyyaml >=5.1
     - regex
     - tblib
-    - toml  # [py<311]
+    - toml
     - tqdm
     - typing_extensions
 
