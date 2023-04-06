@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: d705419ac989a0fbc39b9c4caa9def7a23cde3d3f1b5a8c9ce18d17a34df16d1
+  sha256: 3fe168e6a7d44133bb4cc23852587ce6b0ce85c27b60e8e5a0200d89e734197a
 
 build:
   noarch: python
