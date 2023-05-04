@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "2.0.7" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: c5349f1a8dc70a79a766a6cb0f84d3b73382c43b0abe76e33873d6eaffef1f84
+  sha256: 66017f63987bebb24ec9fd28228a12b3d224cc40ad5a85976768a38591b7b4b2
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - pluggy
+    - typing-extensions
     - appdirs
     - backports.cached-property
     - chardet
