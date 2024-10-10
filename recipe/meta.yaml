@@ -19,27 +19,25 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
+    - setuptools >=40.8.0
+    - wheel
   run:
-    - pluggy
-    - typing-extensions
+    - python >=3.8
     - appdirs
-    - backports.cached-property
     - chardet
     - click
     - colorama >=0.3
     - diff-cover >=2.5.0
-    - importlib_metadata >=1.0.0
+    - importlib_resources
     - jinja2
     - pathspec
     - pytest
-    - python >=3.7
     - pyyaml >=5.1
     - regex
     - tblib
     - toml
     - tqdm
-    - typing_extensions
 
 test:
   source_files:
