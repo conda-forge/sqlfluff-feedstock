@@ -1,5 +1,5 @@
 {% set name = "sqlfluff" %}
-{% set version = "3.3.0" %}
+{% set version = "3.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sqlfluff-{{ version }}.tar.gz
-  sha256: ea0b752c0b8f4602a56fa5b381eb5c806799e4941df8fc0aad0842c9d4283e03
+  sha256: fbd877395ea597686421a5d453c6844243f1b4082563e05d20b36171804e459a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - sqlfluff = sqlfluff.cli.commands:cli
   script: {{ PYTHON }} -m pip install . -vv
@@ -23,6 +23,7 @@ requirements:
     - setuptools >=40.8.0
     - wheel
   run:
+    - pluggy
     - python >={{ python_min }}
     - platformdirs
     - chardet
