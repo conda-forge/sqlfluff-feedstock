@@ -13,7 +13,7 @@ source:
   sha256: b2478983adbeff096327f20763c78ddc36c5b48871c0ea6b084d296136dc4e3e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -23,41 +23,39 @@ build:
 requirements:
   host:
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=40.8.0
     - wheel
   run:
-    - pluggy
     - python >=${{ python_min }}
     - platformdirs
     - chardet
     - click <8.4.0
     - colorama >=0.3
     - diff-cover >=2.5.0
-    - importlib_resources
     - jinja2
     - pathspec
     - pytest
     - pyyaml >=5.1
     - regex
     - tblib
-    - toml
+    - tomli
     - tqdm
 
 tests:
   - python:
       imports:
         - sqlfluff
+      pip_check: true
+      python_version: ${{ python_min }}.*
   - files:
       source:
         - test
     requirements:
       run:
-        - pip
         - pytest
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
-      - pip check
       - sqlfluff --help
       - pytest -vvv --capture=tee-sys -k "not test_rules_test_case_has_variable_introspection " test
 
