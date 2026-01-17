@@ -14,10 +14,9 @@ Development: https://github.com/sqlfluff/sqlfluff
 Documentation: https://docs.sqlfluff.com/en/stable/index.html
 
 SQLFluff is a dialect-flexible and configurable SQL linter. Designed
- with ELT applications in mind, SQLFluff also works with Jinja
- templating and dbt. SQLFluff will auto-fix most linting errors,
- allowing you to focus your time on what matters.
-
+with ELT applications in mind, SQLFluff also works with Jinja
+templating and dbt. SQLFluff will auto-fix most linting errors,
+allowing you to focus your time on what matters.
 
 Current build status
 ====================
