@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlfluff
-  version: 4.2.1
+  version: 4.2.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlfluff-${{ version }}.tar.gz
-  sha256: 32f43fbf6721e57f1a5a87d71df0d94b84ecba6ed65727266c7fa60991110fb9
+  sha256: 0ee2bcd5d704d0bef56bf80b8f0da9b519ab3e9e0bb1d5e6e4b7e3944d3f5606
 
 build:
   number: 0
@@ -40,6 +40,7 @@ requirements:
     - tblib
     - tomli
     - tqdm
+    - pluggy
 tests:
   - python:
       imports:
