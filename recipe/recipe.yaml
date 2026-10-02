@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlfluff
-  version: 4.3.0
+  version: "4.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlfluff-${{ version }}.tar.gz
-  sha256: aa647b3721112f1aca581efe8eaa815a332ae214610a0946592f98a19ef1e8cb
+  sha256: 4d2607466624c8e6275d2bcafd3202c940a4bc6622955909b9a68411b03cd443
 
 build:
   number: 0
