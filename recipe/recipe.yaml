@@ -13,7 +13,7 @@ source:
   sha256: 4d2607466624c8e6275d2bcafd3202c940a4bc6622955909b9a68411b03cd443
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -45,7 +45,9 @@ tests:
       imports:
         - sqlfluff
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - test
